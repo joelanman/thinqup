@@ -6,6 +6,14 @@ html {
   box-sizing: inherit;
 }
 
+/* turn off number input style */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 body {
   padding: 0;
   margin: 0;
