@@ -7,19 +7,35 @@ html {
 }
 
 body {
-  padding: 10px;
-  color: #222;
+  padding: 0;
+  margin: 0;
+  background: #F0F0F0;
+}
+
+main{
+	max-width: 600px;
+	margin: auto;
+}
+
+a {
+  color: #00B7FF;
 }
 
 /* Typography */
 
 body{
+  color: #222;
   font: 19px 'Roboto', sans-serif;
   font-weight: lighter;
- }
+  padding: 20px;
+}
 
 h1{
 	font-weight: lighter;
+}
+
+p{
+	line-height: 1.5em;
 }
 
 input,
@@ -27,9 +43,7 @@ textarea{
   font: 19px 'Roboto', sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
+/* forms */
 
 .form-group{
 	margin: 40px 0;
@@ -43,8 +57,9 @@ label{
 
 input,
 textarea{
-	border: 2px solid #aaa;
+	border: none;
 	padding: 0.5em;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
 }
 
 input{
@@ -53,5 +68,5 @@ input{
 
 textarea{
 	width: 100%;
-	height: 5em;
+	height: 10em;
 }
