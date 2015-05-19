@@ -16,6 +16,8 @@ $(function(){
 		$record.find('.achievement .value').text(record.achievement);
 
 		$record.prependTo('#records');
+
+		$('#remove-all-records').toggleClass('hidden', false);
 	}
 
 
@@ -29,7 +31,7 @@ $(function(){
 		$('#add-record-form').toggleClass('hidden', true);
 		$('#add-record').toggleClass('hidden', false);
 	}
-	
+
 	// draw records from localStorage
 
 	for (var i=0; i<records.length; i++){
@@ -43,6 +45,19 @@ $(function(){
 		e.preventDefault();
 		$('#add-record-form').toggleClass('hidden', false);
 		$('#add-record').toggleClass('hidden', true);
+
+	});
+
+	$('#remove-all-records').on('click', function(e){
+
+		e.preventDefault();
+
+		if (confirm("Are you sure you want to remove all records?")){
+
+			$('#records').empty();
+			delete localStorage.records;
+			$('#remove-all-records').toggleClass('hidden', true);
+		}
 
 	});
 
