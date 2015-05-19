@@ -18,6 +18,18 @@ $(function(){
 		$record.prependTo('#records');
 	}
 
+
+	if (records.length == 0){
+
+		$('#add-record-form').toggleClass('hidden', false);
+		$('#add-record').toggleClass('hidden', true);
+
+	} else {
+
+		$('#add-record-form').toggleClass('hidden', true);
+		$('#add-record').toggleClass('hidden', false);
+	}
+	
 	// draw records from localStorage
 
 	for (var i=0; i<records.length; i++){
