@@ -1,6 +1,30 @@
 $(function(){
 
+	var records = JSON.parse(localStorage.records) || [];
+
 	var $recordTemplate = $($('#record-template').html());
+
+	function drawRecord(record){
+		var $record = $recordTemplate.clone();
+
+		record.time = new Date(record.time);
+		
+		var timeArray = record.time.toTimeString().split(":");
+		$record.find('.time').text(timeArray[0] + ":" + timeArray[1]);
+		$record.find('.description .value').text(record.description);
+		$record.find('.pleasure .value').text(record.pleasure);
+		$record.find('.achievement .value').text(record.achievement);
+
+		$record.prependTo('#records');
+	}
+
+	// draw records from localStorage
+
+	for (var i=0; i<records.length; i++){
+
+		drawRecord(records[i]);
+
+	}
 
 	$('#add-record-button').on('click', function(e){
 
@@ -14,7 +38,6 @@ $(function(){
 
 		e.preventDefault();
 
-		var $record = $recordTemplate.clone();
 
 		var description = $('#add-record-description').val();
 		var pleasure = $('#add-record-pleasure').val();
@@ -24,17 +47,25 @@ $(function(){
 		$('#add-record-pleasure').val('');
 		$('#add-record-achievement').val('');
 
-		var timeArray = new Date().toTimeString().split(":");
+		var date = new Date();
 
-		$record.find('.time').text(timeArray[0] + ":" + timeArray[1]);
-		$record.find('.description .value').text(description);
-		$record.find('.pleasure .value').text(pleasure);
-		$record.find('.achievement .value').text(achievement);
+		var record = {
+			'time': date,
+			'description': description,
+			'pleasure': pleasure,
+			'achievement': achievement
+		};
 
-		$record.prependTo('#records');
+		records.push(record);
+
+		drawRecord(record);
 
 		$('#add-record-form').toggleClass('hidden', true);
 		$('#add-record').toggleClass('hidden', false);
+
+		console.log(JSON.stringify(records));
+
+		localStorage['records'] = JSON.stringify(records);
 
 	});
 
