@@ -1,0 +1,8 @@
+{
+  "name": "Mind Tools",
+  "icons": [
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
