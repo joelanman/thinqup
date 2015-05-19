@@ -1,0 +1,77 @@
+extends layout
+
+block head
+
+	title Pleasure/Achievement Chart
+	meta(property="og:title", content="Thought record")
+	meta(property="og:type", content="website")
+
+block content
+
+	div.pleasure-achievement
+
+		h1
+			span Pleasure/
+			wbr
+			span Achievement Chart
+
+		p Record your level of achievement and pleasure every hour or so through the day.
+
+		p This can help you understand what activities affect your mood.
+
+		form
+
+			#add-record.form-group.add-record.hidden
+
+				button#add-record-button Add record
+
+		form#add-record-form.add-record-form
+
+			.form-group
+
+				label What's happening?
+
+				input#add-record-description
+
+				label Rate your feeling of pleasure, from 1 to 10
+
+				input.small(type="number")#add-record-pleasure
+
+				label Rate your feeling of achievement, from 1 to 10
+
+				input.small(type="number")#add-record-achievement
+
+			.form-group
+
+				button#add-record-done Done
+
+		#records.records
+
+
+		#templates.templates
+
+			#record-template
+
+				.record
+
+					.time
+
+					.description
+
+						.value
+
+					.pleasure
+
+						.label Pleasure
+
+						.value
+
+					.achievement
+
+						.label Achievement
+
+						.value
+
+block pageScript
+
+	script(src="/javascripts/pleasure-achievement.js")

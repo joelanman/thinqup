@@ -14,6 +14,8 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
+/* general */
+
 body {
   padding: 0;
   margin: 0;
@@ -33,6 +35,14 @@ footer{
 
 a {
   color: #00B7FF;
+}
+
+.hidden{
+	display: none;
+}
+
+#templates{
+	display: none;
 }
 
 /* Typography */
@@ -56,6 +66,7 @@ p{
 	line-height: 1.5em;
 }
 
+button,
 input,
 textarea{
   font: 19px 'Roboto', sans-serif;
@@ -93,10 +104,61 @@ textarea{
 	height: 10em;
 }
 
+button{
+	color: #FFF;
+	background: #119922;
+	border: none;
+	padding: 0.5em;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+	border-radius: 3px;
+}
+
+/* other */
+
 details{
 	margin: 20px 0;
 }
 
 summary{
 	cursor: pointer;
+}
+
+/* pages */
+
+.pleasure-achievement .records{
+	border-bottom: 1px solid #ccc;
+}
+
+
+.pleasure-achievement .record{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 1px solid #ccc;
+}
+
+.pleasure-achievement .record .time{
+	font-size: 16px;
+
+}
+
+.pleasure-achievement .description .value{
+	font-weight: normal;
+	display: block;
+	width: auto;
+	margin: 1em 0;
+}
+
+.pleasure-achievement .label{
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.pleasure-achievement .value{
+	display: inline-block;
+	width: 1em;
+}
+
+.pleasure-achievement .pleasure,
+.pleasure-achievement .achievement{
+	text-align: right;
 }
