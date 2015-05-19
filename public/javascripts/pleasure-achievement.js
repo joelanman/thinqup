@@ -1,6 +1,6 @@
 $(function(){
 
-	var records = (localStorage.records) ? JSON.parse(localStorage.records) || [];
+	var records = (localStorage.records) ? JSON.parse(localStorage.records) : [];
 
 	var $recordTemplate = $($('#record-template').html());
 
