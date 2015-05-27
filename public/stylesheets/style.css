@@ -31,7 +31,7 @@ footer{
 }
 
 header{
-	font-size: 16px;
+	margin-bottom: 1em;
 }
 
 header a{
@@ -66,6 +66,14 @@ li{
 	display: none;
 }
 
+h1,h2{
+	margin-bottom: 0;
+}
+
+.subtitle{
+}
+
+
 /* Typography */
 
 body{
@@ -79,8 +87,20 @@ footer{
 	font-size: 16px;
 }
 
-h1{
-	font-weight: lighter;
+h1,h2{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 36px;
+	letter-spacing: -0.04em;
+}
+
+h1 strong, h2 strong{
+	font-weight: 400;
+}
+
+.subtitle{
+	color: #999;
+	font-size: 16px;
 }
 
 p{
