@@ -21,6 +21,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+if (app.get('env') === 'production') {
+  app.use(function(req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      console.log('Redirecting request to https');
+      return res.redirect(301, 'https://' + req.get('Host') + req.url);
+    }
+    next();
+  });
+}
+
 app.locals.pretty = true;
 
 app.use('/', routes);
