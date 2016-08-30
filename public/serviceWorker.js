@@ -59,13 +59,7 @@ self.addEventListener("install", function(event) {
    CSS resources, fonts, any images, etc.
 */
 self.addEventListener("fetch", function(event) {
-  console.log('WORKER: fetch event in progress.');
 
-	console.log(event.request.url);
-
-  /* We should only cache GET requests, and deal with the rest of method in the
-     client-side, by handling failed POST,PUT,PATCH,etc. requests.
-  */
   if (event.request.method !== 'GET') {
     /* If we don't block the event as shown below, then the request will go to
        the network as usual.

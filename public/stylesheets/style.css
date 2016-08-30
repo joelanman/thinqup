@@ -8,20 +8,25 @@ html {
 
 /* turn off number input style */
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* general */
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
 
 body {
   padding: 0;
   margin: 0;
   background: #F0F0F0;
 }
-
 
 header,
 main,
@@ -184,8 +189,14 @@ summary{
 }
 
 .pleasure-achievement .record .time{
+  float: left;
 	font-size: 16px;
+}
 
+.pleasure-achievement .record .change-record{
+  float: right;
+	font-size: 16px;
+  text-align: right;
 }
 
 .pleasure-achievement .description .value{
