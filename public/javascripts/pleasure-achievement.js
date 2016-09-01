@@ -107,6 +107,21 @@ $(function(){
 
 	});
 
+	$('#add-record-cancel').on('click', function(e){
+
+		e.preventDefault();
+
+		$('#add-record-description').val('');
+		$('#add-record-pleasure').val('');
+		$('#add-record-achievement').val('');
+
+		currentlyEditing = null;
+
+		$('#add-record-form').toggleClass('hidden', true);
+		$('#add-record').toggleClass('hidden', false);
+
+	});
+
 	$('#add-record-done').on('click', function(e){
 
 		e.preventDefault();
