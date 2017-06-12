@@ -222,3 +222,7 @@ summary{
 .pleasure-achievement .achievement{
 	text-align: right;
 }
+
+.main-footer a{
+  color: inherit;  
+}
