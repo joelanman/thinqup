@@ -18,29 +18,29 @@ block content
 
 		.form-group
 
-			label What happened?
+			label(for="input-what-happened") What happened?
 
-			textarea
-
-		.form-group
-
-			label How do you feel?
-
-			input
-
-			label From 1 to 10, how intense is this feeling?
-
-			input.small(type="number")
+			textarea#input-what-happened
 
 		.form-group
 
-			label What negative thoughts do you have?
+			label(for="input-emotion") How do you feel?
 
-			textarea
+			input#input-emotion
+
+			label(for="input-emotion-rating") From 1 to 10, how intense is this feeling?
+
+			input.small(type="number")#input-emotion-rating
 
 		.form-group
 
-			label What evidence supports those thoughts?
+			label(for="input-negative-thoughts") What negative thoughts do you have?
+
+			textarea#input-negative-thoughts
+
+		.form-group
+
+			label(for="input-negative-thoughts-evidence") What evidence supports those thoughts?
 
 			details
 
@@ -53,11 +53,11 @@ block content
 					- things people have said
 					- research you've heard about
 
-			textarea
+			textarea#input-negative-thoughts-evidence
 
 		.form-group
 
-			label What evidence contradicts those thoughts?
+			label(for="input-contradicting-evidence") What evidence contradicts those thoughts?
 
 			details
 
@@ -70,22 +70,22 @@ block content
 					- things people have said
 					- research you've heard about
 
-			textarea
+			textarea#input-contradicting-evidence
 
 		.form-group
 
-			label What are some new, positive thoughts?
+			label(for="input-positive-thoughts") What are some new, positive thoughts?
 
-			textarea
+			textarea#input-positive-thoughts
 
 		.form-group
 
-			label How do you feel?
+			label(for="input-emotion-2") How do you feel?
 
-			input
+			input#input-emotion-2
 
-			label From 1 to 10, how intense is this feeling?
+			label(for="input-emotion-2-rating") From 1 to 10, how intense is this feeling?
 
-			input.small(type="number")
+			input.small(type="number")#input-emotion-2-rating
 
 		p Hopefully, by thinking through these questions, you'll now be feeling more positive about your situation.
